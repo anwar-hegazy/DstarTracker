@@ -1,0 +1,10 @@
+#python3 /home/poller/rollup-deletehandled.py
+#python3 /home/poller/doNextTimedTest.py
+#python3 /home/poller/rollup-sitesdown.py &
+#python3 /home/poller/rollup-connected.py &
+#python3 /home/poller/rollup-connectedto.py &
+#python3 /home/poller/rollup-LastHeard.py &
+sleep 10
+#python3 /home/poller/getRefpeatersInfoCallSingle.py 1 &
+
+

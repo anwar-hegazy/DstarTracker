@@ -1,0 +1,2 @@
+* * * * * /home/poller/minuterun
+* 1 * * * /sbin/reboot
