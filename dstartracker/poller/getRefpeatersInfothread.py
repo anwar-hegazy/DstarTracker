@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from _thread import start_new_thread, allocate_lock
 import mysql.connector
 import sys
+from database import *
 
 #set initial values
 num_threads = 0
@@ -146,9 +147,7 @@ if (BalanceID <= 0):
     sys.exit(0)
 
 # Open MySQL Connection
-cnx = mysql.connector.connect(user='root', password='newday!',
-                              host='127.0.0.1',
-                              database='dstar')
+cnx = mysql.connector.connect(user=dbuser, password=dbpassword, host=dbhost, database=dbname)
 
 # Read repeaters in the current balance ID
 curloop = cnx.cursor()

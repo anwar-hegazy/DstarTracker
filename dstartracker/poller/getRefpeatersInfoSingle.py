@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import mysql.connector
 import sys
 import time
+from database import *
 
 def getHTML(url):
     try:
@@ -172,9 +173,7 @@ if (uid <= 0):
     sys.exit(0)
 
 # Open MySQL Connection
-cnx = mysql.connector.connect(user='root', password='newday!',
-                              host='127.0.0.1',
-                              database='dstar')
+cnx = mysql.connector.connect(user=dbuser, password=dbpassword, host=dbhost, database=dbname)
 
 # Read repeaters in the current balance ID
 curloop = cnx.cursor()

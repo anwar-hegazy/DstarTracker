@@ -5,6 +5,7 @@ from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 import mysql.connector
 import sys
+from database import *
  
 def getHTML(url):
     try:
@@ -101,9 +102,7 @@ if (RepeaterID <= 0):
     print("Usage: scrapetest <repeaterid> (ID is > 0)")
     sys.exit(0)
     
-cnx = mysql.connector.connect(user='root', password='newday!',
-                              host='127.0.0.1',
-                              database='dstar') 
+cnx = mysql.connector.connect(user=dbuser, password=dbpassword, host=dbhost, database=dbname)
  
 repeaterINFO = getRepeaterURL(RepeaterID)
 repeaterURL = repeaterINFO[0]

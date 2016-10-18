@@ -8,7 +8,7 @@ getRefpeatersInfoCallSingle.py		This is the current starting poller, it loops th
 					repeaters and starts a new process to poll for each
 
 getRefpeaterInfoSerial.py		This will get data from each repeater one at a time serially.
-					All code is on this one file.
+					All code is in this one file.
 
 getRefpeatersInfoSingle.py		This is the script that getRefpeatersInfoCallSingle.py calls
 					to do the work.

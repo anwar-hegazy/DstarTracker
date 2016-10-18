@@ -5,7 +5,7 @@ import sys
 import os
 import time
 from datetime import datetime, timedelta
-
+from database import *
 
 def insertRefpeater(Callsign, URL):
 
@@ -26,9 +26,7 @@ def getCallsign(CallSignID):
 #### START OF CODE ####
 
 # Open MySQL Connection
-cnx = mysql.connector.connect(user='root', password='newday!',
-                              host='127.0.0.1',
-                              database='dstar')
+cnx = mysql.connector.connect(user=dbuser, password=dbpassword, host=dbhost, database=dbname)
 
 # Read repeaters in the current balance ID
 curloop = cnx.cursor()
